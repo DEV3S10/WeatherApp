@@ -1,0 +1,124 @@
+:root {
+  --bg: #eef2f7;
+  --text: #0f172a;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --card: #1e293b;
+  --border: #334155;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: var(--card);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.controls input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.controls button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+}
+
+.controls button:hover {
+  opacity: 0.9;
+}
+
+.controls button:not(:first-of-type) {
+  background: var(--card);
+  color: var(--text);
+}
+
+.card {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 16px;
+  margin-top: 16px;
+  border: 1px solid var(--border);
+}
+
+.hourly {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.hour-item {
+  min-width: 70px;
+  text-align: center;
+  padding: 10px 6px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.hour-item span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.day-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.day-item span {
+  opacity: 0.8;
+}
